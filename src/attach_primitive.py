@@ -1,4 +1,4 @@
-from textToSpeech.speak import Speak
+""""from textToSpeech.speak import Speak
 from textToSpeech.say_hello import SayHello
 from textToSpeech.speech import Speech
 from textToSpeech.say_text import SayText
@@ -8,7 +8,7 @@ from textToSpeech.bonnard_1 import Bonnard3
 from textToSpeech.bonnard_1 import Bonnard4
 from textToSpeech.bonnard_1 import Bonnard5
 from textToSpeech.bonnard_1 import Bonnard6
-
+"""
 
 #from textToSpeech.say_hyper import SayHyper
 
@@ -38,6 +38,7 @@ from behavior.talkThree import TalkThreeBehave
 from behavior.talkFour import TalkFourBehave
 from behavior.tracking import TrackingBehave
 from behavior.sad import SadBehave
+from behavior.say import Say
 
 from vision.camera import Camera
 
@@ -98,7 +99,8 @@ def attach_primitives(robot, isCamera=True):
     robot.attach_primitive(TalkTwoBehave(robot), "talk_two_behave")
     robot.attach_primitive(TalkThreeBehave(robot), "talk_three_behave")
     robot.attach_primitive(TalkFourBehave(robot), "talk_four_behave")
-    robot.attach_primitive(Speak(robot), "speak")
+    robot.attach_primitive(Say(robot),"say_sentence")
+    """"robot.attach_primitive(Speak(robot), "speak")
     robot.attach_primitive(SayHello(robot), "say_hello")
     robot.attach_primitive(SayText(robot), "say_text")
     robot.attach_primitive(SadBehave(robot), "sad_behave")
@@ -108,7 +110,7 @@ def attach_primitives(robot, isCamera=True):
     robot.attach_primitive(Bonnard3(robot), "bonnard_3")
     robot.attach_primitive(Bonnard4(robot), "bonnard_4")
     robot.attach_primitive(Bonnard5(robot), "bonnard_5")
-    robot.attach_primitive(Bonnard6(robot), "bonnard_6")
+    robot.attach_primitive(Bonnard6(robot), "bonnard_6")"""
 
     if isCamera:
         robot.attach_primitive(TrackingBehave(robot, robot.camera, 50), "tracking_behave")
