@@ -14,7 +14,7 @@ from textToSpeech.bonnard_1 import Bonnard6
 
 from behavior.idle import UpperBodyIdleMotion, HeadIdleMotion
 from behavior.yes import YesBehave
-from behavior.wave import WaveBehave
+from behavior.wave_bis import WaveBehave
 from behavior.no import NoBehave
 from behavior.crossArms import CrossArmsBehave
 from behavior.crossHands import CrossHandsBehave
@@ -39,6 +39,7 @@ from behavior.talkFour import TalkFourBehave
 from behavior.tracking import TrackingBehave
 from behavior.sad import SadBehave
 from behavior.say import Say
+from behavior.say_local import Say_local
 
 from vision.camera import Camera
 
@@ -100,6 +101,7 @@ def attach_primitives(robot, isCamera=True):
     robot.attach_primitive(TalkThreeBehave(robot), "talk_three_behave")
     robot.attach_primitive(TalkFourBehave(robot), "talk_four_behave")
     robot.attach_primitive(Say(robot),"say_sentence")
+    robot.attach_primitive(Say_local(robot),"say_sentence_local")
     """"robot.attach_primitive(Speak(robot), "speak")
     robot.attach_primitive(SayHello(robot), "say_hello")
     robot.attach_primitive(SayText(robot), "say_text")
