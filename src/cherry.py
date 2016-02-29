@@ -9,24 +9,23 @@ from poppy.creatures import PoppyHumanoid
 
 from attach_primitive import attach_primitives
 
-from vision.camera import Camera
-from vision.runLook import RunLook
+#from vision.camera import Camera
+#from vision.runLook import RunLook
 
 
 class Cherry():
     # TODO : Voir avec pierre si Cherry() puis self.robot ou Cherry(PoppyTorso)
 
-    def __init__(self, simulator=None, camera=True):
+    def __init__(self, simulator='vrep', camera=False):
         """Constructeur de la classe Cherry
 
         Param :
         simulator -- Mettre simulator='vrep' si vous voulez utiliser Vrep (None par défault)
         camera -- Utilisation de la camera ou non (True par défault)
-        
+       
         """
 
-        if simulator is not None:
-
+        if simulator is not None:			
             self.robot = PoppyHumanoid(simulator='vrep')
             self.isCamera = False
 

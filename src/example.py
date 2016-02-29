@@ -10,4 +10,6 @@ cherry.setup()
 
 cherry.robot.bow_behave.start()
 
+
+
 time.sleep(15)

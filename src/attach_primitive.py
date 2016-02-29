@@ -57,8 +57,8 @@ from behavior.disappointment import DisappointmentBehave
 from behavior.littleArmsUp import LittleArmsUpBehave
 from behavior.seeYouSoon import SeeYouSoonBehave
 
-from vision.camera import Camera
-from vision.runLook import RunLook
+#from vision.camera import Camera
+#from vision.runLook import RunLook
 
 def attach_primitives(cherry, isCamera=True):
     """ Attach all primitive to the robot.
@@ -92,7 +92,7 @@ def attach_primitives(cherry, isCamera=True):
     robot.attach_primitive(ThinkBehave(robot), "think_behave")
     robot.attach_primitive(CopyArmBehave(robot, 50), "copy_arm_behave")
     robot.attach_primitive(BowBehave(robot), "bow_behave")
-    robot.attach_primitive(Say_local(robot),"say_sentence_local")
+    #robot.attach_primitive(Say_local(robot),"say_sentence_local")
     robot.attach_primitive(ExtravertiArmsUpBehave(robot),"extra_arms_up")
     robot.attach_primitive(RestBehave(robot),"rest_position")
     robot.attach_primitive(MeBehave(robot),"me_behave")
