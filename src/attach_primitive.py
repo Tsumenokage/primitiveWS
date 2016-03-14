@@ -57,6 +57,10 @@ from behavior.disappointment import DisappointmentBehave
 from behavior.littleArmsUp import LittleArmsUpBehave
 from behavior.seeYouSoon import SeeYouSoonBehave
 
+from screen.eye import eyeBehave
+from screen.eyeHappy import eyeHappyBehave
+from screen.eyeAngry import eyeAngryBehave
+
 #from vision.camera import Camera
 #from vision.runLook import RunLook
 
@@ -121,7 +125,9 @@ def attach_primitives(cherry, isCamera=True):
     robot.attach_primitive(DisappointmentBehave(robot),"disappointment_behave")
     robot.attach_primitive(LittleArmsUpBehave(robot),"little_arms_up_behave")
     robot.attach_primitive(SeeYouSoonBehave(robot),"see_you_soon_behave")
-
+    robot.attach_primitive(eyeBehave(robot),"eyes_behave")
+    robot.attach_primitive(eyeHappyBehave(robot),"eyes_happy_behave")
+    robot.attach_primitive(eyeAngryBehave(robot),"eyes_angry_behave")
 
     if isCamera:
         robot.attach_primitive(TrackingBehave(robot, cherry.camera, 50), "tracking_behave")
