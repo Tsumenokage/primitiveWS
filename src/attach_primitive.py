@@ -125,7 +125,7 @@ def attach_primitives(cherry, isCamera=True):
     robot.attach_primitive(DisappointmentBehave(robot),"disappointment_behave")
     robot.attach_primitive(LittleArmsUpBehave(robot),"little_arms_up_behave")
     robot.attach_primitive(SeeYouSoonBehave(robot),"see_you_soon_behave")
-    robot.attach_primitive(eyeBehave(robot),"eyes_behave")
+    robot.attach_primitive(eyeBehave(robot,"blue","neutral"),"eyes_behave")
     robot.attach_primitive(eyeHappyBehave(robot),"eyes_happy_behave")
     robot.attach_primitive(eyeAngryBehave(robot),"eyes_angry_behave")
 

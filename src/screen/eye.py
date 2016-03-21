@@ -6,33 +6,38 @@ import pypot.primitive
 
 class eyeBehave(pypot.primitive.Primitive):
 
-	properties = pypot.primitive.Primitive.properties + ['color','mood']
+	properties = pypot.primitive.Primitive.properties + ['colorEye','moodEye']
 
-	def __init__(self, robot):
-		pypot.primitive.Primitive.__init__(self, robot, color = 'blue', mood = 'neutral')
+	def __init__(self, robot,color = "blue",mood ="neutral"):
+		pypot.primitive.Primitive.__init__(self, robot)
 		self._robot = robot
 		self._color = color
 		self._mood = mood
 
 	def run(self):
 		poppy = self.robot
-		webbrowser.open("127.0.0.1/eye.pih/neutral/blue")
+		#url = "127.0.0.1/eye.pih/" + self._mood + "/" + self._color
+		#webbrowser.open(url)
+		data = '{"color" : "'+self._color+'", "mood" : "'+self._mood+'"}';
+		file = open("screen/eye.json","w")
+		file.write(data)
+		file.close()
 
 
 	@property
-	def color(self):
+	def colorEye(self):
 	    return self._color
-	
-	@color.setter
-	def color(self,color)
+
+	@colorEye.setter
+	def colorEye(self,color):
 		print color
 		self._color = color
 
 	@property
-	def mood(self)
+	def moodEye(self):
 		return self._mood
 
-	@mood.setter
-	def mood(self,mood)
+	@moodEye.setter
+	def moodEye(self,mood):
 		print mood
 		self._mood = mood
