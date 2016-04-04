@@ -25,13 +25,13 @@ li.superpose {
 	/*Position de la paupière*/
 	position : fixed;
 	left : 0%;
-	top : 12%;
+	top : 0%;
 
-	/*animation-name: clignementPaupiereSup;*/
+	animation-name: clignementPaupiereSup;
     animation-duration: 10s
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	/*-moz-animation-name: clignementPaupiereSup;*/
+	-moz-animation-name: clignementPaupiereSup;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
@@ -41,13 +41,13 @@ li.superpose {
 	/*Position de la paupière*/
 	position : fixed;
 	right : 0%;
-	top : 12%;
+	top : 0%;
 	
-	/*animation-name: clignementPaupiereSup;*/
+	animation-name: clignementPaupiereSup;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	/*-moz-animation-name: clignementPaupiereSup;*/
+	-moz-animation-name: clignementPaupiereSup;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
@@ -69,11 +69,38 @@ li.superpose {
 
 }
 
+@keyframes mouvementPupilleGauche {
+	0% {left : 10%;}
+    70%{left : 10%;}
+	75% {left: 8%;}
+	80%{left: 12%;}
+	85%{left : 10%;}
+	100% {left : 10%;}
+}
+
+
 #pupilleGauche{
 
 	position : fixed;
 	top: 30%;
 	left : 10%;
+	-moz-animation-name: mouvementPupilleGauche;
+	-moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-out;
+	
+	-moz-transform : scale(1.2,1.5);
+	
+	
+}
+
+@keyframes mouvementPupilleDroite {
+	0% {right : 10%;}
+    70%{right : 10%;}
+	75% {right: 12%;}
+	80%{right: 8%;}
+	85%{right : 10%;}
+	100% {right : 10%;}
 }
 
 
@@ -82,6 +109,13 @@ li.superpose {
 	position : fixed;
 	top: 30%;
 	right : 10%;
+	-moz-animation-name: mouvementPupilleDroite;
+	-moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-out;
+	
+	-moz-transform : scale(1.2,1.5);
+
 	
 }
 
@@ -107,8 +141,6 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
-
 }
 
 #masquePaupiereInfDroit{
@@ -131,17 +163,16 @@ li.superpose {
 #sourcilGauche{
 	
 	position: fixed;
-	top : 18%;
-	left : 23%;
-	-moz-transform:rotate(25deg);
-	
-}
+	top : 20%;
+	left : 20%;
 
+
+}
 
 #sourcilDroit{
 	
 	position: fixed;
-	top : 0%;
-	right : 25%;
-	-moz-transform:rotate(155deg);
+	top : 20%;
+	right : 20%;
+
 }

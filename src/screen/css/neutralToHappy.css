@@ -88,6 +88,11 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	-moz-transition-delay: 1s;
 }
 
 @keyframes mouvementPupilleDroite {
@@ -110,6 +115,11 @@ li.superpose {
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
 	
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 1s;
+	
 	
 }
 
@@ -117,7 +127,7 @@ li.superpose {
 @keyframes clignementPaupiereInf {
 	0% {bottom : 0%;}
     90%{bottom : 0%;}
-	95% {bottom : 30%;}
+	95% {bottom : 40%;}
 	100% {bottom : 0%;}
 }
 
@@ -126,15 +136,24 @@ li.superpose {
 	bottom : 0%;
 	left: 0%;
 	
-	
-	animation-name: clignementPaupiereInf;
+	/*animation-name: clignementPaupiereInf;*/
     animation-duration: 10s;
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	-moz-animation-name: clignementPaupiereInf;
+	/*-moz-animation-name: clignementPaupiereInf;*/
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+	
+	/*Transition*/
+	transition-property: bottom;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+	-moz-transition-property: bottom;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	
 }
 
 #masquePaupiereInfDroit{
@@ -142,32 +161,41 @@ li.superpose {
 	bottom : 0%;
 	right : 0%;
 	
-	
-	animation-name: clignementPaupiereInf;
+	/*animation-name: clignementPaupiereInf;*/
     animation-duration: 10s;
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	-moz-animation-name: clignementPaupiereInf;
+	/*-moz-animation-name: clignementPaupiereInf;*/
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-
+	
+	/*Transition*/
+	transition-property: bottom;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+	-moz-transition-property: bottom;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
 
 }
 
 #sourcilGauche{
 	
 	position: fixed;
-	top : 20%;
-	left : 20%;
+	bottom : 88%;
+	left : 15%;
+	 -moz-transform:rotate(155deg);
 
 
 }
 
+
 #sourcilDroit{
 	
 	position: fixed;
-	top : 20%;
+	top : 12%;
 	right : 20%;
+	-moz-transform:rotate(25deg);
 
 }

@@ -17,14 +17,14 @@ li.superpose {
 	0% {top : -15%;}
     90%{top : -15%;}
 	95% {top : 18%;}
-	100% {top : 0%;}
+	100% {top : -15%;}
 }
 
 
 #masquePaupiereSupGauche{
 	/*Position de la paupière*/
 	position : fixed;
-	left : 0%;
+	left : 00%;
 	top : 0%;
 
 	animation-name: clignementPaupiereSup;
@@ -51,6 +51,7 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
 }
 
 #oeilGauche{
@@ -82,12 +83,17 @@ li.superpose {
 #pupilleGauche{
 
 	position : fixed;
-	top: 30%;
-	left : 0%;
+	top: 24%;
+	left : 10%;
 	-moz-animation-name: mouvementPupilleGauche;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	-moz-transition-delay: 0s;
 }
 
 @keyframes mouvementPupilleDroite {
@@ -103,71 +109,92 @@ li.superpose {
 #pupilleDroit{
 
 	position : fixed;
-	top: 30%;
-	right : 0%;
+	top: 24%;
+	right : 10%;
 	-moz-animation-name: mouvementPupilleDroite;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
 	
-	
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	-moz-transition-delay: 0s;
 }
 
 
 @keyframes clignementPaupiereInf {
 	0% {bottom : 0%;}
     90%{bottom : 0%;}
-	95% {bottom : 30%;}
+	95% {bottom : 40%;}
 	100% {bottom : 0%;}
 }
 
 #masquePaupiereInfGauche{
 	position: fixed;
-	bottom : 0%;
+	bottom : 30%;
 	left: 0%;
 	
-	
-	animation-name: clignementPaupiereInf;
+	/*animation-name: clignementPaupiereInf;*/
     animation-duration: 10s;
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	-moz-animation-name: clignementPaupiereInf;
+	/*-moz-animation-name: clignementPaupiereInf;*/
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+		/*Transition*/
+	transition-property: bottom;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+	-moz-transition-property: bottom;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	-moz-transition-delay: 1s;
 }
 
 #masquePaupiereInfDroit{
 	position: fixed;
-	bottom : 0%;
+	bottom : 30%;
 	right : 0%;
 	
-	
-	animation-name: clignementPaupiereInf;
+	/*animation-name: clignementPaupiereInf;*/
     animation-duration: 10s;
     animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
-	-moz-animation-name: clignementPaupiereInf;
+	/*-moz-animation-name: clignementPaupiereInf;*/
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-
+	
+		/*Transition*/
+	transition-property: bottom;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+	-moz-transition-property: bottom;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+	-moz-transition-delay: 1s;
 
 }
 
 #sourcilGauche{
 	
 	position: fixed;
-	top : 20%;
-	left : 20%;
+	bottom : 88%;
+	left : 15%;
+	 -moz-transform:rotate(155deg);
 
 
 }
 
+
 #sourcilDroit{
 	
 	position: fixed;
-	top : 20%;
+	top : 12%;
 	right : 20%;
+	-moz-transform:rotate(25deg);
 
 }

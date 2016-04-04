@@ -35,6 +35,16 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+	transition-property: top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 1s;
+	
 }
 
 #masquePaupiereSupDroit{
@@ -51,6 +61,15 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+	transition-property: top;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+	-moz-transition-property: top;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 1s;
 }
 
 #oeilGauche{
@@ -107,8 +126,6 @@ li.superpose {
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
-
 }
 
 #masquePaupiereInfDroit{
