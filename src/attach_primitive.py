@@ -57,8 +57,12 @@ from behavior.disappointment import DisappointmentBehave
 from behavior.littleArmsUp import LittleArmsUpBehave
 from behavior.seeYouSoon import SeeYouSoonBehave
 
-from vision.camera import Camera
-from vision.runLook import RunLook
+from screen.eye import eyeBehave
+from screen.eyeHappy import eyeHappyBehave
+from screen.eyeAngry import eyeAngryBehave
+
+#from vision.camera import Camera
+#from vision.runLook import RunLook
 
 def attach_primitives(cherry, isCamera=True):
     """ Attach all primitive to the robot.
@@ -92,7 +96,7 @@ def attach_primitives(cherry, isCamera=True):
     robot.attach_primitive(ThinkBehave(robot), "think_behave")
     robot.attach_primitive(CopyArmBehave(robot, 50), "copy_arm_behave")
     robot.attach_primitive(BowBehave(robot), "bow_behave")
-    robot.attach_primitive(Say_local(robot),"say_sentence_local")
+    #robot.attach_primitive(Say_local(robot),"say_sentence_local")
     robot.attach_primitive(ExtravertiArmsUpBehave(robot),"extra_arms_up")
     robot.attach_primitive(RestBehave(robot),"rest_position")
     robot.attach_primitive(MeBehave(robot),"me_behave")
@@ -121,7 +125,9 @@ def attach_primitives(cherry, isCamera=True):
     robot.attach_primitive(DisappointmentBehave(robot),"disappointment_behave")
     robot.attach_primitive(LittleArmsUpBehave(robot),"little_arms_up_behave")
     robot.attach_primitive(SeeYouSoonBehave(robot),"see_you_soon_behave")
-
+    robot.attach_primitive(eyeBehave(robot,"blue","neutral"),"eyes_behave")
+    robot.attach_primitive(eyeHappyBehave(robot),"eyes_happy_behave")
+    robot.attach_primitive(eyeAngryBehave(robot),"eyes_angry_behave")
 
     if isCamera:
         robot.attach_primitive(TrackingBehave(robot, cherry.camera, 50), "tracking_behave")
