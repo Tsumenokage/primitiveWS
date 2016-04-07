@@ -1,18 +1,3 @@
-p
-{
-    color: blue;
-}
-
-
-
-li.superpose {
-   position: absolute;
-   top: 0px;
-   left: 0px;
-}
-
-
-
 @keyframes clignementPaupiereSup {
 	0% {top : -15%;}
     90%{top : -15%;}
@@ -23,10 +8,6 @@ li.superpose {
 
 #masquePaupiereSupGauche{
 	/*Position de la paupière*/
-	position : fixed;
-	left : 00%;
-	top : 0%;
-
 	animation-name: clignementPaupiereSup;
     animation-duration: 10s
     animation-iteration-count: infinite;
@@ -39,10 +20,6 @@ li.superpose {
 
 #masquePaupiereSupDroit{
 	/*Position de la paupière*/
-	position : fixed;
-	right : 0%;
-	top : 0%;
-	
 	animation-name: clignementPaupiereSup;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -56,17 +33,10 @@ li.superpose {
 
 #oeilGauche{
 
-	position : fixed;
-	top: 20%;
-	left : 0%;
-
 }
 
 #oeilDroit{
 
-	position : fixed;
-	top: 20%;
-	right : 0%;
 
 }
 

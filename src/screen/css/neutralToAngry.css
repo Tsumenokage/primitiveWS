@@ -23,9 +23,6 @@ li.superpose {
 
 #masquePaupiereSupGauche{
 	/*Position de la paupière*/
-	position : fixed;
-	left : 0%;
-	top : -15%;
 
 	transition-property: top;
     transition-duration: 2s;

@@ -1,0 +1,78 @@
+li.superpose {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+
+
+#oeilGauche{
+
+	position : fixed;
+	top: 20%;
+	left : 0%;
+}
+
+#oeilDroit{
+
+	position : fixed;
+	top: 20%;
+	right : 0%;
+
+}
+
+#pupilleGauche{
+
+	position : fixed;
+	top: 30%;
+	left : 0%;
+}
+
+#pupilleDroit{
+
+	position : fixed;
+	top: 30%;
+	right : 0%;
+}
+
+#masquePaupiereInfGauche{
+	position: fixed;
+	bottom : 5%;
+	left: 0%;
+}
+
+#masquePaupiereInfDroit{
+	position: fixed;
+	bottom : 5%;
+	right : 0%;
+}
+
+#masquePaupiereSupGauche{
+	/*Position de la paupière*/
+	position : fixed;
+	left : 0%;
+	top : -5%;
+
+}
+
+
+#masquePaupiereSupDroit{
+	/*Position de la paupière*/
+	position : fixed;
+	right : 0%;
+	top : -5%;
+}
+
+
+#sourcilGauche{
+	
+	position: fixed;
+	top : 20%;
+	left : 20%;
+}
+
+#sourcilDroit{
+	
+	position: fixed;
+	top : 20%;
+	right : 20%;
+}
