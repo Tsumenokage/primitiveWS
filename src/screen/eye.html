@@ -97,111 +97,8 @@
 	</form>
 <script src="js/jquery.js"></script>
 <script src="js/switch.js"></script>
+<script src="js/gestionCSS.js"></script>
 <script>
-
-
-
-window.onload  = function eye()
-{
-	
-	var data = $.getJSON("eye.json", function(json) {
-	    console.log(json);
-		
-		
-		var color = json.color;
-		var mood = json.mood;
-		
-		
-			if (mood == "happy"){
-			
-				var mydiv = document.getElementById('masquePaupiereInfGauche');
-				mydiv.style.bottom = "30%"; 
-				var mydiv = document.getElementById('masquePaupiereInfDroit');	
-				mydiv.style.bottom = "30%";
-				var mydiv = document.getElementById('masquePaupiereSupGauche');
-				mydiv.style.top = "-5%"; 
-				var mydiv = document.getElementById('masquePaupiereSupDroit');	
-				mydiv.style.top = "-5%";
-				var mydiv = document.getEle
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.top = "24%"; 
-				var mydiv = document.getElementById('pupilleDroit');	
-				mydiv.style.top = "24%";
-			}
-			else if(mood == "neutral"){
-				
-				var mydiv = document.getElementById('masquePaupiereInfGauche');
-				mydiv.style.bottom = "5%"; 
-				var mydiv = document.getElementById('masquePaupiereInfDroit');	
-				mydiv.style.bottom = "5%";
-				var mydiv = document.getElementById('masquePaupiereSupGauche');
-				mydiv.style.top = "-5%"; 
-				var mydiv = document.getElementById('masquePaupiereSupDroit');	
-				mydiv.style.top = "-5%";
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.top = "30%"; 
-				var mydiv = document.getElementById('pupilleDroit');	
-				mydiv.style.top = "30%";	
-			}
-			else if (mood == "angry") {
-				var mydiv = document.getElementById('masquePaupiereInfGauche');
-				mydiv.style.bottom = "5%"; 
-				var mydiv = document.getElementById('masquePaupiereInfDroit');	
-				mydiv.style.bottom = "5%";
-				var mydiv = document.getElementById('masquePaupiereSupGauche');
-				mydiv.style.top = "12%"; 
-				var mydiv = document.getElementById('masquePaupiereSupDroit');	
-				mydiv.style.top = "12%";
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.top = "30%"; 
-				var mydiv = document.getElementById('pupilleDroit');	
-				mydiv.style.top = "30%";	
-			}
-			else if (mood == "sad") {
-				var mydiv = document.getElementById('masquePaupiereInfGauche');
-				mydiv.style.bottom = "5%"; 
-				var mydiv = document.getElementById('masquePaupiereInfDroit');	
-				mydiv.style.bottom = "5%";
-				var mydiv = document.getElementById('masquePaupiereSupGauche');
-				mydiv.style.top = "8%"; 
-				mydiv.style.left = "-5%";
-				var mydiv = document.getElementById('masquePaupiereSupDroit');
-				mydiv.style.top = "8%"; 
-				mydiv.style.right = "-5%";
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.top = "30%"; 
-				var mydiv = document.getElementById('pupilleDroit');	
-				mydiv.style.top = "30%";	
-			}
-			else if (mood == "sadToNeutral") {
-				var mydiv = document.getElementById('masquePaupiereSupGauche');
-				mydiv.style.top = "-15%"; 
-				mydiv.style.left = "0%";
-				var mydiv = document.getElementById('masquePaupiereSupDroit');
-				mydiv.style.top = "-15%"; 
-				mydiv.style.right = "0%";
-			}
-			else if (mood == "neutralToSurprise") {
-				var mydiv = document.getElementById('pupilleDroit');
-				mydiv.style.transform = "scale(1.2,1.5)";
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.transform = "scale(1.2,1.5)";
-			}
-			else if (mood == "surpriseToNeutral") {
-				var mydiv = document.getElementById('pupilleDroit');
-				mydiv.style.transform = "scale(1,1)";
-				var mydiv = document.getElementById('pupilleGauche');
-				mydiv.style.transform = "scale(1,1)";
-			}
-
-		setTimeout(eye,1000);
-		changeCSS("css/" + mood +".css",1);
-
-		document.getElementById("oeilGaucheCouleur").style.fill = color;
-		document.getElementById("oeilDroitCouleur").style.fill = color;
-
-	});
-}
 
 
 function changeCSS(cssFile, cssLinkIndex) {
@@ -214,15 +111,8 @@ function changeCSS(cssFile, cssLinkIndex) {
     newlink.setAttribute("href", cssFile);
 
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-	}
-/*
-$('script').each(function() {
-    if ($(this).attr('src') !== 'eye.json') {
-        var old_src = $(this).attr('src');
-        $(this).attr('src', '');
-        setTimeout(function(){ $(this).attr('src', old_src + '?'+new Date()); }, 250);
-    }
-});*/
+}
+
 
 </script>
 </body>

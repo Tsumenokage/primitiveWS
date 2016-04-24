@@ -6,6 +6,7 @@
 }
 
 #masquePaupiereInfGauche{
+
 	/*Transition*/
 	-moz-transition-property: bottom;
     -moz-transition-duration: 2s;
@@ -15,7 +16,7 @@
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-
+	
 
 }
 
@@ -26,46 +27,44 @@
     -moz-transition-duration: 2s;
     -moz-transition-timing-function: linear;
 
-    -moz-animation-name: clignementPaupiereInf;
+	-moz-animation-name: clignementPaupiereInf;
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
+
 }
 
 @keyframes clignementPaupiereSup {
 	0% {height : 30%;}
     80%{height : 30%;}
-	90% {height : 60%;}
+	90% {height : 35%;}
 	100% {height : 30%;}
 }
 
+
 #masquePaupiereSupGauche{
 
-	/*Transition*/
-	-moz-transition-property: top, left;
-    -moz-transition-duration: 2s;
-    -moz-transition-timing-function: linear;
-
-    -moz-animation-name: clignementPaupiereSup;
-	-moz-animation-duration: 5s;
-    -moz-animation-iteration-count: infinite;
-	-moz-animation-timing-function: ease-out;
-	
-}
-
-#masquePaupiereSupDroit{
-
-	/*Transition*/
-	-moz-transition-property: top, right;
-    -moz-transition-duration: 2s;
-    -moz-transition-timing-function: linear;
+	transition-property: top, left;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 
 	-moz-animation-name: clignementPaupiereSup;
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+}
+
+#masquePaupiereSupDroit{
 	
+	transition-property: top, right;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+
+	-moz-animation-name: clignementPaupiereSup;
+	-moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease-out;
+
 }
 
 
@@ -78,16 +77,6 @@
 	100% {left : 10%;}
 }
 
-@keyframes balayagePupilleGauche {
-
-	0% {left : 10%; }
-	25% {left : 0%; }
-	75% {left : 20%; }
-	100% {left : 10%; }
-
-}
-
-
 #pupilleGauche{
 
 	-moz-transition-property: transform, top, left;
@@ -95,11 +84,12 @@
     -moz-transition-timing-function: linear;
     -moz-transition-delay: 1s;
 
-	-moz-animation-name: balayagePupilleGauche;
+	-moz-animation-name: mouvementPupilleGauche;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
 }
+
 
 @keyframes mouvementPupilleDroite {
 	0% {right : 10%;}
@@ -110,14 +100,6 @@
 	100% {right : 10%;}
 }
 
-@keyframes balayagePupilleDroit {
-
-	0% {right : 10%; }
-	25% {right : 20%; }
-	75% {right : 0%; }
-	100% {right : 10%; }
-
-}
 
 
 #pupilleDroit{
@@ -127,7 +109,7 @@
     -moz-transition-timing-function: linear;
     -moz-transition-delay: 1s;
 
-	-moz-animation-name: balayagePupilleDroit;
+	-moz-animation-name: mouvementPupilleDroite;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;

@@ -1,22 +1,22 @@
 @keyframes clignementPaupiereInf {
 	0% {height : 30%;}
     80%{height : 30%;}
-	90% {height : 60%;}
+	90% {height : 40%;}
 	100% {height : 30%;}
 }
 
 #masquePaupiereInfGauche{
+
 	/*Transition*/
 	-moz-transition-property: bottom;
     -moz-transition-duration: 2s;
     -moz-transition-timing-function: linear;
 
-	-moz-animation-name: clignementPaupiereInf;
+    -moz-animation-name: clignementPaupiereInf;
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-
-
+	
 }
 
 #masquePaupiereInfDroit{
@@ -30,7 +30,7 @@
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
+
 }
 
 @keyframes clignementPaupiereSup {
@@ -47,11 +47,13 @@
     -moz-transition-duration: 2s;
     -moz-transition-timing-function: linear;
 
-    -moz-animation-name: clignementPaupiereSup;
+	/*Animation*/
+	-moz-animation-name: clignementPaupiereSup;
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
 	
+
 }
 
 #masquePaupiereSupDroit{
@@ -61,13 +63,12 @@
     -moz-transition-duration: 2s;
     -moz-transition-timing-function: linear;
 
-	-moz-animation-name: clignementPaupiereSup;
+	/*Animation*/
+   	-moz-animation-name: clignementPaupiereSup;
 	-moz-animation-duration: 5s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
 }
-
 
 @keyframes mouvementPupilleGauche {
 	0% {left : 10%;}
@@ -78,15 +79,6 @@
 	100% {left : 10%;}
 }
 
-@keyframes balayagePupilleGauche {
-
-	0% {left : 10%; }
-	25% {left : 0%; }
-	75% {left : 20%; }
-	100% {left : 10%; }
-
-}
-
 
 #pupilleGauche{
 
@@ -95,10 +87,12 @@
     -moz-transition-timing-function: linear;
     -moz-transition-delay: 1s;
 
-	-moz-animation-name: balayagePupilleGauche;
+	-moz-animation-name: mouvementPupilleGauche;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
+	
+
 }
 
 @keyframes mouvementPupilleDroite {
@@ -110,30 +104,22 @@
 	100% {right : 10%;}
 }
 
-@keyframes balayagePupilleDroit {
-
-	0% {right : 10%; }
-	25% {right : 20%; }
-	75% {right : 0%; }
-	100% {right : 10%; }
-
-}
-
 
 #pupilleDroit{
+
 
 	-moz-transition-property: transform, top, right;
     -moz-transition-duration: 2s;
     -moz-transition-timing-function: linear;
     -moz-transition-delay: 1s;
-
-	-moz-animation-name: balayagePupilleDroit;
+	
+	-moz-animation-name: mouvementPupilleDroite;
 	-moz-animation-duration: 10s;
     -moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: ease-out;
-	
-	
-}
+
+]
+
 
 
 
